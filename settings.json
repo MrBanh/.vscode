@@ -349,15 +349,15 @@
       "type": "command"
     },
     {
-      "command": "magit.status",
+      "command": "workbench.view.scm",
       "keys": "g.g",
-      "name": "Git status",
+      "name": "Git source control",
       "type": "command"
     },
     {
-      "command": "workbench.view.scm",
+      "command": "magit.status",
       "keys": "g.G",
-      "name": "Git source control",
+      "name": "Git status",
       "type": "command"
     },
     {
