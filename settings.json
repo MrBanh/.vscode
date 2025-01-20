@@ -91,23 +91,13 @@
       "position": -1
     },
     {
-      "keys": ["\t"],
-      "position": -1
-    },
-    {
-      "keys": "b.d",
+      "keys": [
+        "\t"
+      ],
       "position": -1
     },
     {
       "keys": "g.i",
-      "position": -1
-    },
-    {
-      "keys": "s.s",
-      "position": -1
-    },
-    {
-      "keys": "s.S",
       "position": -1
     },
     {
@@ -144,18 +134,18 @@
       "name": "Yank to clipboard",
       "type": "commands"
     },
-    
+
     // +BUFFER
     {
       "command": "workbench.action.closeOtherEditors",
-      "keys": "b.c",
-      "name": "Close editors in group",
+      "keys": "b.d",
+      "name": "Delete editors in group",
       "type": "command"
     },
     {
       "command": "workbench.action.closeEditorsInGroup",
-      "keys": "b.C",
-      "name": "Close editors in group",
+      "keys": "b.D",
+      "name": "Delete all editors in group",
       "type": "command"
     },
     {
@@ -170,8 +160,8 @@
       "name": "Unpin buffer",
       "type": "command"
     },
-    
-    // +Code
+
+    // +CODE
     {
       "bindings": [
         {
@@ -218,13 +208,13 @@
           "key": "y",
           "name": "Yank to clipboard",
           "type": "commands"
-        }
+        },
       ],
       "keys": "c",
       "name": "+Code",
       "type": "bindings"
     },
-    
+
     // +DEBUG
     {
       "command": "editor.debug.action.conditionalBreakpoint",
@@ -278,10 +268,6 @@
       "when": "debugState == 'stopped'"
     },
     {
-      "keys": "d.s",
-      "position": -1
-    },
-    {
       "command": "workbench.action.debug.stepInto",
       "keys": "d.f11",
       "name": "Step Into",
@@ -303,23 +289,8 @@
       "keys": "d.o",
       "position": -1
     },
-    
-    // +FIND
-    {
-      "keys": "f",
-      "name": "+Find",
-      "type": "bindings",
-      "bindings": []
-    },
-    {
-      "commands": [
-        "editor.action.addSelectionToNextFindMatch",
-        "workbench.action.findInFiles"
-      ],
-      "keys": "f.c",
-      "name": "Find word under cursor",
-      "type": "commands"
-    },
+
+    // +FILE/FIND
     {
       "command": "workbench.action.quickOpen",
       "keys": "f.f",
@@ -334,66 +305,29 @@
     },
     {
       "commands": [
-        "workbench.action.findInFiles"
-      ],
-      "keys": "f.w",
-      "name": "Find word",
-      "type": "commands"
-    },
-
-    // +FILE
-    {
-      "keys": "F",
-      "name": "+File",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "=",
-          "name": "Format file",
-          "type": "command",
-          "command": "editor.action.formatDocument"
-        },
-      ]
-    },
-    {
-      "command": "workbench.action.editor.changeLanguageMode",
-      "keys": "F.l",
-      "name": "Change file language",
-      "type": "commands"
-    },
-    {
-      "command": "quokka.createFile",
-      "keys": "F.n",
-      "name": "New Quokka File",
-      "type": "commands"
-    },
-    {
-      "commands": [
         "fileutils.renameFile",
         "workbench.action.focusFirstEditorGroup"
       ],
-      "keys": "F.r",
+      "keys": "f.r",
       "name": "Rename file",
       "type": "commands"
     },
     {
-      "keys": "F.t",
-      "name": "Show tree/explorer view",
-      "type": "command",
-      "command": "workbench.view.explorer"
+      "keys": "f.R",
+      "position": -1
     },
     {
-        "keys": "F.T",
-        "name": "Show active file in tree/explorer view",
-        "type": "command",
-        "command": "workbench.files.action.showActiveFileInExplorer"
+      "command": "quokka.createFile",
+      "keys": "f.n",
+      "name": "New Quokka File",
+      "type": "commands"
     },
     {
       "commands": [
         "fileutils.removeFile",
         "workbench.action.focusFirstEditorGroup"
       ],
-      "keys": "F.x",
+      "keys": "f.x",
       "name": "Delete file",
       "type": "commands"
     },
@@ -401,15 +335,9 @@
       "commands": [
         "workbench.action.localHistory.restoreViaPicker"
       ],
-      "keys": "F.X",
+      "keys": "f.X",
       "name": "Restore file",
       "type": "commands"
-    },
-    {
-      "keys": "F.y",
-      "name": "Copy path of active file",
-      "type": "command",
-      "command": "workbench.action.files.copyPathOfActiveFile"
     },
 
     // +GIT
@@ -457,7 +385,6 @@
       "type": "command"
     },
     {
-      // https://marketplace.visualstudio.com/items?itemName=TomPollak.lazygit-vscode
       "command": "lazygit-vscode.toggle",
       "keys": "g.g",
       "name": "Git status",
@@ -484,13 +411,13 @@
     {
       "command": "gitlens.openCommitOnRemote",
       "keys": "g.o",
-      "name": "Open commit on remote",
+      "name": "open commit on remote",
       "type": "command"
     },
     {
       "command": "git.pull",
       "keys": "g.p",
-      "name": "Pull",
+      "name": "pull",
       "type": "command"
     },
     {
@@ -599,7 +526,7 @@
         {
           "command": "bookmarks.listFromAllFiles",
           "key": "l",
-          "name": "List marks",
+          "name": "List marks (ctrl + shift + m)",
           "type": "command"
         },
         {
@@ -638,21 +565,9 @@
         "editor.action.addSelectionToNextFindMatch",
         "workbench.action.findInFiles"
       ],
-      "keys": "s.c",
+      "keys": "s.w",
       "name": "Search word under cursor",
       "type": "commands"
-    },
-    {
-      "command": "workbench.action.quickOpen",
-      "keys": "s.f",
-      "name": "Find file in quick open",
-      "type": "command"
-    },
-    {
-      "command": "file-browser.open",
-      "keys": "s.F",
-      "name": "Find file relative to active file",
-      "type": "command"
     },
     {
       "commands": [
